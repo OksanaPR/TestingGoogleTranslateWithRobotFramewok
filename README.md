@@ -35,7 +35,20 @@ In this project we will be using Python3 . Just follow the instalractions from t
   Editors
 There are a lot of Editors you can use to build your own project, in this specific I am using PyCharm Community. After installing PyCharm, don't forget to install Intellibot plugin.
 
+Libraries
+By default Robot framework goes with Standart libraries which you don't have to install: Builtin, OperatingSystem, String, Processes, Dialogs, Remote, Telnet, DateTime, Collections, Screenshot and XML.
 
+As for external libraries we will use SeleniumLibrary. We will need to and install and download Selenium Web drivers. The whole list of supported drivers is listed [here](https://selenium.dev/documentation/en/webdriver/driver_requirements/#quick-reference) but in this project we are focused only on Firefox. Download Firofox driver -> create special folder to place it in (e.g.bin) -> add this folder to the PATH. The same you can for any other driver you want to use. To install Selenium Library use pip_:
+                                
+                                pip install seleniumlibrary
+
+# Testing of the automatic language recognition for two languages
+For this use case we will create several test cases using SleniumLibrary. We will use two languages - English and Ukrainian.
+        Test Case 1 
+        Test Case 2
+        Test Case 3
+        Test Case 4
+        Test Case 5
 
 
 

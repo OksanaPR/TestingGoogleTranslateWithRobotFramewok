@@ -92,7 +92,9 @@ Assume the project name is "GoogleTranslate"
         |   |   |-- test1.robot
         |   |   |-- test2.robot
         |   |-- Results
+As we know, in web system automation developing, for reducing the amount of duplicated code and means that if the UI changes, the fix need only be applied in one place, we commonly use [Page Objects][Page Objects] with [UI Mapping][UI Mapping].  
 
+But Robot Framework is a not an Object Oriented Framework.  So in the spirit of Page Objects we should call it Page Resources.  
 
 
 # Testing of the automatic language recognition for two languages

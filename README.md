@@ -79,7 +79,8 @@ After every test execution it creates a report.html, by default this report is a
 ### 4. Project structure
 ------------------------------------------------------------
 Assume the project name is "GoogleTranslate"
- .
+
+        .
         |-- Google Translate
         |   |-- Libraries
         |   |   |-- library1.py

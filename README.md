@@ -5,11 +5,11 @@ This is a short exaple which examplains on how to test Google translate function
 Table of content:
 ### 1. Introduction
 ### 2. Installation
-#### 2.1 Python and pip
-#### 2.2 Robot framework
-#### 2.3 PyCharm Editor and Robot plagin
-#### 2.4  Desired browsers and Selenium Library
-#### 2.5 Internal Libraries
+ - Python and pip
+ - Robot framework
+ - PyCharm Editor and Robot plagin
+ - Desired browsers and Selenium Library
+ - Internal Libraries
 ### 3.How to execute tests
 ### 4. Tests examples:
 * Automatic language recognition for two languages
@@ -27,7 +27,7 @@ Robot Framework is operating system and application independent. The core framew
 - [GitHub](http://github.com/robotframework/robotframework)
 - [PyPI](http://pypi.python.org/pypi/robotframework)
 - [Maven central](http://search.maven.org/#search%7Cga%7C1%7Ca%3Arobotframework)
-======
+
 
 ### 2. Installation
 
@@ -41,13 +41,10 @@ In this project we will be using [Python3](https://www.python.org/downloads/). J
                       
                       #upgrade to the latest version
                       pip install --upgrade robotframework
-======
 
 #### 2.3 PyCharm Editor and Robot plagin
 
 There are a lot of Editors you can use to build your own project but I am using [PyCharm Community](https://www.jetbrains.com/pycharm/download/#section=windows). After installing PyCharm, don't forget to install *Intellibot plugin*(patched for SeleniumLibrary). For this launch PyCharm -> Open File -> Settings dialog -> Click on Plugins -> Search for & install Intellibot and restart PyCharm.
-
-======
 
 #### 2.4 Desired browsers and Selenium Library
 
@@ -57,12 +54,10 @@ In order to work with Selenium Library we have to install and download Selenium 
 
 To use SeleniumLibrary in Robot Framework tests, the library needs to first be imported using the *Library* setting as any other library. The library accepts some import time arguments, which are documented in the keyword documentation along with [all the keywords](https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html) provided by the library(e.g.*Open Browser, Input Text, Click Element, Execute Javascript*).
 
-======
-
 #### 2.5 Internal Libraries
 By default Robot framework goes with Standart libraries which you don't have to install: Builtin, OperatingSystem, String, Processes, Dialogs, Remote, Telnet, DateTime, Collections, Screenshot and XML.
 - ***Built-In Library*** - provides a set of often needed generic keywords. Always automatically available without imports.The provided keywords can be used, for example, for verifications (e.g. Should Be Equal, Should Contain), conversions (e.g. *Convert To Integer*) and for various other purposes (e.g. *Log, Sleep, Run Keyword If, Set Global Variable, Should be equal*).
-======
+
 
 ### 3.How to execute tests
 # Testing of the automatic language recognition for two languages

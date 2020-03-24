@@ -50,6 +50,9 @@ There are a lot of Editors you can use to build your own project but I am using 
 In order to work with Selenium Library we have to install and download Selenium Web drivers. The whole list of supported drivers is listed [here](https://selenium.dev/documentation/en/webdriver/driver_requirements/#quick-reference) but in this project I am using only on *Firefox.* [Download Firofox driver](https://github.com/mozilla/geckodriver/releases) -> create special folder to place it in (e.g.C:\bin) -> add this folder to the *PATH*. When you run tests it will know where to take drivers. The same you can for any other driver you want to use. To install Selenium Library use pip:
 
                         pip install seleniumlibrary
+                        
+                        #if you use older version of Python
+                        pip install robotframework-seleniumlibrary
 
 To use SeleniumLibrary in Robot Framework tests, the library needs to first be imported using the *Library* setting as any other library. The library accepts some import time arguments, which are documented in the keyword documentation along with [all the keywords](https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html) provided by the library(e.g.*Open Browser, Input Text, Click Element, Execute Javascript*).
 

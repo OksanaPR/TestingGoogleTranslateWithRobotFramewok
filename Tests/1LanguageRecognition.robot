@@ -14,10 +14,9 @@ Test Teardown  Close All Browsers
 Test Case 1 - Verify English language recognition
   Open browser on Google translate page
   Type Text in English
-  Confirm English is detected /////ADDD
+  Confirm English is detected 
 
-
-Test Case 3 - Verify Ukrainian language recognition
+Test Case 2 - Verify Ukrainian language recognition
   Open browser on Google translate page
   Type Text in Ukrainian
   Confirm Ukrainian is detected

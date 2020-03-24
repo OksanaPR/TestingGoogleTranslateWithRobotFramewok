@@ -43,6 +43,7 @@ In this project we will be using [Python3](https://www.python.org/downloads/). J
 #### 2.3 PyCharm Editor and Robot plagin
 
 There are a lot of Editors you can use to build your own project but I am using [PyCharm Community](https://www.jetbrains.com/pycharm/download/#section=windows). After installing PyCharm, don't forget to install *Intellibot plugin*(patched for SeleniumLibrary). For this launch PyCharm -> Open File -> Settings dialog -> Click on Plugins -> Search for & install Intellibot and restart PyCharm.
+
 ------------------------------------------------------------
 #### 2.4 Desired browsers and Selenium Library
 
@@ -69,6 +70,7 @@ After every test execution it creates a report.html, by default this report is a
                          robot -d folderForResults testName.robot
 
 *Results* folder will be created during execution.
+
 ------------------------------------------------------------
 ### 4. Project structure
 Assume the project name is "GoogleTranslate"

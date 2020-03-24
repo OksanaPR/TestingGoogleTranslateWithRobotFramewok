@@ -125,35 +125,35 @@ You can easily download the whole project, unzip it and following all instaction
          Type Text in Ukrainian
          Confirm Ukrainian is detected
 
-
+Just two simple tests which check English and Ukrainian language recognition. Other tests examples  are in Tests directory.
 
      Keywords.robot
     
      #This files contains Keywords used in all Tests. It's always better to split Keywords into
      #different files depending on every test case. But since this is only example I am puting everything into one file
 
-    *** Keywords ***
-    #**********************************Common Keyword**********************************************************
-    Open browser on Google translate page
-      Open browser  ${TRANSLATOR_URL}  ${BROWSER}
-      Page should contain element  ${LOGO}  ${DETECT_LANG_BUTTON}  limit=2
+     *** Keywords ***
+     #**********************************Common Keyword**********************************************************
+     Open browser on Google translate page
+         Open browser  ${TRANSLATOR_URL}  ${BROWSER}
+         Page should contain element  ${LOGO}  ${DETECT_LANG_BUTTON}  limit=2
 
-    #**********************************Test Suite 1 Keywords****************************************************
-    Type Text in English
-       Input Text  ${TEXT_FIELD}  ${TEXT1}
-       ${TEXT_FIELD_VALUE}  Get Value  ${TEXT_FIELD}
-       Should be equal   ${TEXT1}  ${TEXT_FIELD_VALUE}
+     #**********************************Test Suite 1 Keywords****************************************************
+     Type Text in English
+         Input Text  ${TEXT_FIELD}  ${TEXT1}
+         ${TEXT_FIELD_VALUE}  Get Value  ${TEXT_FIELD}
+         Should be equal   ${TEXT1}  ${TEXT_FIELD_VALUE}
 
-    Type Text in Ukrainian
-       Input Text  ${TEXT_FIELD}  ${TEXT2}
-       ${TEXT_FIELD_VALUE}  Get Value  ${TEXT_FIELD}
-       Should be equal   ${TEXT2}  ${TEXT_FIELD_VALUE}
+     Type Text in Ukrainian
+         Input Text  ${TEXT_FIELD}  ${TEXT2}
+         ${TEXT_FIELD_VALUE}  Get Value  ${TEXT_FIELD}
+         Should be equal   ${TEXT2}  ${TEXT_FIELD_VALUE}
 
-    Confirm English is detected
-       ${LANG_VALUE}  Get Value  ${DETECT_LANG_BUTTON}
+     Confirm English is detected
+         ${LANG_VALUE}  Get Value  ${DETECT_LANG_BUTTON}
 
-    Confirm Ukrainian is detected
-       ${LANG_VALUE}  Get Value  ${DETECT_LANG_BUTTON}
+     Confirm Ukrainian is detected
+         ${LANG_VALUE}  Get Value  ${DETECT_LANG_BUTTON}
 
 
 

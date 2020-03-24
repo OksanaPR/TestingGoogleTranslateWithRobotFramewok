@@ -66,13 +66,15 @@ By default Robot framework goes with Standart libraries which you don't have to 
 
 There are several ways of executing tests(from PyCharm, command line, Task Scheduler, batch file or you can congifure Jenkins). In this project we will run them in 2 ways: from PyCharm and command line. In order to execute tests from PyCharm open Termanal window -> swich to directory where your test are located (e.g. *C:\Users\GitHub\RobotFramework-tutorial\Tests*) -> and execute 
 
-                         robot testName.robot
+                            robot testName.robot
 
 After every test execution it creates a report.html, by default this report is added to Tests folder. If you want the results to be in another folder specify it by executing
                          
-                         robot -d folderForResults testName.robot
+                           robot -d folderForResults testName.robot
 
-*Results* folder will be created during execution.
+*Results* folder will be created during execution uder Tests directory or you can create a folder and specify it during execution (exeting should be done from Project folder)
+
+                           robot -d Results Tests\testName.robot
 
 ------------------------------------------------------------
 ### 4. Project structure
@@ -81,30 +83,77 @@ Assume the project name is "GoogleTranslate"
         .
         |-- Google Translate
         |   |-- Libraries
-        |   |   |-- library1.py
-        |   |   |-- library2.py
+        |   |   |-- library.py
         |   |-- Resources
-        |   |   |-- home_page.robot
-        |   |   |-- search_page.robot
+        |   |   |-- WebElements.robot
+        |   |   |-- Keywords.robot
         |   |-- Tests
-        |   |   |-- test1.robot
-        |   |   |-- test2.robot
+        |   |   |-- TestSuite1.robot
+        |   |   |-- TestSuite2.robot
+        |   |   |-- TestSuite3.robot
+        |   |   |-- TestSuite4.robot
         |   |-- Results
-As we know, in web system automation developing, for reducing the amount of duplicated code and means that if the UI changes, the fix need only be applied in one place, we commonly use [Page Objects][Page Objects] with [UI Mapping][UI Mapping].  
+All variables are in WebElements.robot file. It always better to create web element for every page in separate files but in my case as an example I was using only one.
+Keywords are also in sepate directory and they used in all Test Cases. It also better to create separate keywords files for every web page, in this case it's easier to maintain them, as an example I used one directory.
+Tests directory contains only tests written using SeleniumLibrary mostly, BuiltIn and HTTP.Requests library.
 
-But Robot Framework is a not an Object Oriented Framework.  So in the spirit of Page Objects we should call it Page Resources.  
+You can easily download the whole project, unzip it and following all instactions above just run test.
 
 ------------------------------------------------------------
 
-# Testing of the automatic language recognition for two languages
-For this use case we will create several test cases using SleniumLibrary. We will use two languages - English and Ukrainian.
-        Test Case 1 
-        Test Case 2
-        Test Case 3
-        Test Case 4
-        Test Case 5
+### 5. Examples:
+     Test Suite1.robot
+     
+           *** Settings ***
+           Documentation  This is an example on how to test the automatic language recognition
+          ...  for two languages (English and Ukrainian) using SleniumLibrary.
+
+          Library  SeleniumLibrary
+          Library  BuiltIn
+          Resource  ../Resources/Keywords.robot
+          Resource  ../Resources/WebElements.robot
+          Test Teardown  Close All Browsers
+
+         *** Test Cases ***
+         Test Case 1 - Verify English language recognition
+         Open browser on Google translate page
+         Type Text in English
+         Confirm English is detected 
+
+         Test Case 2 - Verify Ukrainian language recognition
+         Open browser on Google translate page
+         Type Text in Ukrainian
+         Confirm Ukrainian is detected
 
 
+
+     Keywords.robot
+    
+     #This files contains Keywords used in all Tests. It's always better to split Keywords into
+     #different files depending on every test case. But since this is only example I am puting everything into one file
+
+    *** Keywords ***
+    #**********************************Common Keyword**********************************************************
+    Open browser on Google translate page
+      Open browser  ${TRANSLATOR_URL}  ${BROWSER}
+      Page should contain element  ${LOGO}  ${DETECT_LANG_BUTTON}  limit=2
+
+    #**********************************Test Suite 1 Keywords****************************************************
+    Type Text in English
+       Input Text  ${TEXT_FIELD}  ${TEXT1}
+       ${TEXT_FIELD_VALUE}  Get Value  ${TEXT_FIELD}
+       Should be equal   ${TEXT1}  ${TEXT_FIELD_VALUE}
+
+    Type Text in Ukrainian
+       Input Text  ${TEXT_FIELD}  ${TEXT2}
+       ${TEXT_FIELD_VALUE}  Get Value  ${TEXT_FIELD}
+       Should be equal   ${TEXT2}  ${TEXT_FIELD_VALUE}
+
+    Confirm English is detected
+       ${LANG_VALUE}  Get Value  ${DETECT_LANG_BUTTON}
+
+    Confirm Ukrainian is detected
+       ${LANG_VALUE}  Get Value  ${DETECT_LANG_BUTTON}
 
 
 

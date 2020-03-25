@@ -17,7 +17,7 @@ Test Case 1 - Verify English language recognition with Detect language function
   Type Text in English
   Confirm English is detected
 
-#Test Case 2 - Verify English language recognition when another language is selected
+Test Case 2 - Verify English language recognition when another language is selected
   Open browser on Google translate page
   Close Notification popup
   Select Czech language as default
@@ -26,12 +26,12 @@ Test Case 1 - Verify English language recognition with Detect language function
   Confirm English is recognized
   Close Browser
 
-#Test Case 3 - Verify Ukrainian language recognition with Detect language function
+Test Case 3 - Verify Ukrainian language recognition with Detect language function
   Open browser on Google translate page
   Type Text in Ukrainian
   Confirm Ukrainian is detected
 
-#Test Case 4 - Verify Ukrainian language recognition when another language is selected
+Test Case 4 - Verify Ukrainian language recognition when another language is selected
   Open browser on Google translate page
   Close Notification popup
   Select Czech language as default

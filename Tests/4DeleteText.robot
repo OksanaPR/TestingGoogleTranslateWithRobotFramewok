@@ -10,7 +10,7 @@ Test Teardown  Close All Browsers
 
 
 *** Test Cases ***
-Test Case 7 - Verify delete text option
+Test Case 1 - Verify delete text option
   Open browser on Google translate page
   Type Text in English
 #This key word deletes text in three ways: with backspaces,

@@ -3,18 +3,18 @@
 This is a short exaple which examplains on how to test Google translate functionality with Python and Robot framework
 
 ### 1. Introduction
-[Robot Framework](http://robotframework.org) is an open source automation framework for acceptance testing, acceptance test driven development (ATDD), and robotic process automation (RPA). It has simple plain text syntax and it can be extended easily with libraries implemented using Python or Java.
+[Robot Framework](http://robotframework.org) is an open source automation framework for acceptance testing, acceptance test driven development (ATDD), and robotic process automation (RPA). It has simple plain text syntax (keyword-driven) and it can be extended easily with libraries implemented using Python or Java.
 
-Robot Framework is operating system and application independent. The core framework is implemented using [Python](http://python.org.org), supports both Python 2 and Python 3, and runs also on Jython (JVM), IronPython (.NET) and PyPy. The framework has a rich ecosystem around it consisting of various generic libraries and tools that are developed as separate projects. For more information about Robot Framework and the ecosystem, see http://robotframework.org. Robot Framework development is sponsored by Robot Framework .
+Robot Framework is operating system and application independent. The core framework is implemented using [Python](http://python.org.org), supports both Python 2 and Python 3, and runs also on Jython (JVM), IronPython (.NET) and PyPy. The framework has a rich ecosystem around it consisting of various generic libraries and tools that are developed as separate projects. For more information about Robot Framework and the ecosystem, see http://robotframework.org.
 - [GitHub](http://github.com/robotframework/robotframework)
 - [PyPI](http://pypi.python.org/pypi/robotframework)
 - [Maven central](http://search.maven.org/#search%7Cga%7C1%7Ca%3Arobotframework)
 ------------------------------------------------------------
 ### 2. Installation
-To understand how the framewoork works and the logic of my project you have to follow installation instractions step by step.
+To understand how the framewoork works and the logic of my project you have to follow installation instractions step by step. If you have evrything setup just download the project in ZIP format and verify it in any Editor.
 
 #### 2.1 Python and pip
-In this project we will be using [Python3](https://www.python.org/downloads/). Just follow the instalractions from the website and install it properly by adding a correct *PATH*. Starting from Python 2.7.9, the standard Windows installer by default installs and activates pip. Now you are ready to install Robot framework. The recommended installation method is using pip: 
+In this project we will be using [Python3](https://www.python.org/downloads/). Follow the instalractions from the website and install it properly by adding a correct *PATH*. Starting from Python 2.7.9, the standard Windows installer by default installs and activates pip. Now you are ready to install Robot framework. The recommended installation method is using pip: 
 ```sh
 $ pip install robotframework
 
@@ -24,12 +24,12 @@ $ pip install --upgrade robotframework
 ------------------------------------------------------------
 #### 2.3 PyCharm Editor and Robot plagin
 
-There are a lot of Editors you can use to build your own project but I am using [PyCharm Community](https://www.jetbrains.com/pycharm/download/#section=windows). After installing PyCharm, don't forget to install *Intellibot plugin*(patched for SeleniumLibrary). For this launch PyCharm -> Open File -> Settings dialog -> Click on Plugins -> Search for & install Intellibot and restart PyCharm.
+There are a lot of Editors you can use to build your project, I am using [PyCharm Community](https://www.jetbrains.com/pycharm/download/#section=windows). Download and install it. After installing PyCharm, don't forget to install *Intellibot plugin*(@patched for SeleniumLibrary). To install plugin launch PyCharm -> Open File -> Settings dialog -> Click on Plugins -> Search for & install Intellibot and restart PyCharm.
 
 ------------------------------------------------------------
 #### 2.4 Desired browsers and Selenium Library
 
-In order to work with Selenium Library we have to install and download Selenium Web drivers. The whole list of supported drivers is listed [here](https://selenium.dev/documentation/en/webdriver/driver_requirements/#quick-reference) but in this project I am using only on *Firefox.* [Download Firofox driver](https://github.com/mozilla/geckodriver/releases) -> create special folder to place it in (e.g.C:\bin) -> add this folder to the *PATH*. When you run tests it will know where to take drivers. The same you can for any other driver you want to use. 
+In order to work with Selenium Library we have to install and download Selenium Web drivers. The whole list of supported drivers is listed [here](https://selenium.dev/documentation/en/webdriver/driver_requirements/#quick-reference) but in this project I am using only *Firefox.* [Download Firofox driver](https://github.com/mozilla/geckodriver/releases) -> create special folder to place it in (e.g.C:\bin) -> add this folder to the *PATH*. When you run tests it will know where to take drivers. The same you can for any other driver you want to use. 
 
 To install Selenium Library use pip:
 
@@ -40,7 +40,7 @@ $ pip install seleniumlibrary
 $ pip install robotframework-seleniumlibrary
 ```
 
-To use SeleniumLibrary in Robot Framework tests, the library needs to first be imported using the *Library* setting as any other library. The library accepts some import time arguments, which are documented in the keyword documentation along with [all the keywords](https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html) provided by the library(e.g.*Open Browser, Input Text, Click Element, Execute Javascript*).
+To use SeleniumLibrary in Robot Framework tests, the library needs to first be imported using the *Library* setting. This should be done for all test cases where you use it. The library accepts some import time arguments, which are documented in the keyword documentation along with [all the keywords](https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html) provided by the library(e.g.*Open Browser, Input Text, Click Element, Execute Javascript*).
 
 ------------------------------------------------------------
 #### 2.5 Internal Libraries

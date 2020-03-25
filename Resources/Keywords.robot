@@ -24,6 +24,7 @@ Confirm English is detected
 Confirm Ukrainian is detected
   ${LANG_VALUE}  Get Value  ${DETECT_LANG_BUTTON}
 
+
 #**********************************Test Suite 2 Keywords****************************************************
 Close Notification popup
   Click Element  ${NOTIFICATION}
@@ -37,19 +38,17 @@ Select Czech language as default
   Should be equal  ${CZECH}  ${LANG_VALUE}
 
 Confirm English is recognized
-  Set Selenium Implicit Wait  10 seconds
-  Execute JavaScript  document.querySelector("#spelling-correction a").click()
-  Get WebElement  ${TEST}
-  Click Link  ${SPELLING_CORRECTION}
   ${RECOGNIZED_LANG}  Get Value  ${FOCUSED_BUTTON}
-  Should be equal  ${ENGLISH}
+  Should be equal  ${ENGLISH}  ${RECOGNIZED_LANG}
 
 Confirm Ukrainian is recognized
-  Execute JavaScript  document.querySelector("#spelling-correction a").click()
-  Get WebElement  ${TEST}
-  Click Link  ${SPELLING_CORRECTION}
   ${RECOGNIZED_LANG}  Get Value  ${FOCUSED_BUTTON}
-  Should be equal  ${CZECH}
+  Should be equal  ${UKRAINIAN}  ${RECOGNIZED_LANG}
+
+Click on Recognised language link
+  Wait Until Element Is Visible  ${SPELLING_CORRECTION}
+  Execute JavaScript  document.querySelector("#spelling-correction a").click()
+
 
 #**********************************Test Suite 3 Keywords****************************************************
 Set translate from English language
@@ -62,6 +61,7 @@ Set translate from English language
   Should be equal  ${ENGLISH}  ${RECOGNIZED_LANG}
 
 Set translate to Ukrainian language
+  Execute JavaScript  ${CLICK_DPOPDOWN}
   Execute JavaScript  ${SELECT_UKR}
   Log Location
   Location Should Contain  ${CORRECT_LANG}
@@ -71,7 +71,7 @@ Exchange languages
   Click Element  ${EXCHANGE_LANG}
   Log Location
   Location Should Contain  ${UKR_TO_ENG}
-  Press Keys None CONTROL+SHIFT+S
+  Press Keys  None  CONTROL+SHIFT+S
   Log Location
   Location Should Contain  ${ENG_TO_UKR}
 

@@ -1,6 +1,5 @@
 *** Settings ***
-Documentation  This is an example on how to test the manual language exchange
-...  for two languages (English and Ukrainian) using SleniumLibrary.
+Documentation  This is an example on how to test delete text functionality using SleniumLibrary.
 
 Library  SeleniumLibrary
 Library  BuiltIn

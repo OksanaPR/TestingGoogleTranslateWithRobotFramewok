@@ -17,22 +17,22 @@ ${RIGHT_LANG_BUTTON}  xpath=//*[@class='sl-sugg-button-container']
 ${LEFT_LANG_BUTTON}
 
 ${NOTIFICATION}  xpath=//*[@class='tlid-acknowledge-button-overlay acknowledge-button-overlay']
-${NOTIFICATION_AREA}  notification-area
+${NOTIFICATION_AREA}  xpath=//*[@class='acknowledge-button button']
 
 ${LANG_LIST}  xpath=//*[@class='displaying-homepage with-sl-list with-lang-list']
 ${CZECH_LANG}  xpath=//*[@class='language_list_item_wrapper language_list_item_wrapper-cs']
 ${FOCUSED_BUTTON}  xpath=//*[@class='goog-inline-block jfk-button jfk-button-standard jfk-button-collapse-left jfk-button-collapse-right jfk-button-checked']
 ${CZECH}  cs
-
-
+${UKRAINIAN}  uk
 ${ENGLISH_LANG}  xpath=//*[@class='language_list_item_wrapper language_list_item_wrapper-en']
 ${ENGLISH}  en
+${CLICK_DPOPDOWN}  document.getElementsByClassName("tl-more tlid-open-target-language-list")[0].click()
+${SELECT_UKR}  document.getElementsByClassName("language-list")[1].getElementsByClassName("language_list_item_wrapper-uk")[0].click()
 ${SPELLING_CORRECTION}  xpath=//*[@href='javascript:void(0)']
-
 ${MORE}  //*[@class='tl-more tlid-open-target-language-list']
 ${UKR_LANG}  //*[@class='language_list_item_wrapper language_list_item_wrapper-uk']
+${SPELLING_CORRECTION}  css:#spelling-correction a
 ${UKR_LANG_SELECTED}  language_list_item_wrapper-uk
-${SELECT_UKR}  document.getElementsByClassName("language-list")[1].getElementsByClassName("language_list_item_wrapper-uk")[0].click()
 ${CORRECT_LANG}  op=translate&sl=en&tl=uk
 ${EXCHANGE_LANG}  //*[@class='swap jfk-button-narrow jfk-button-standard jfk-button']
 ${UKR_TO_ENG}  op=translate&sl=uk&tl=en

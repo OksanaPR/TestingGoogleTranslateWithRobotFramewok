@@ -13,4 +13,3 @@ Test Case 1 - Verify User can select language manually (translate from and trans
   Open browser on Google translate page
   Set translate from English language
   Set translate to Ukrainian language
-  Set translate to Ukrainian language

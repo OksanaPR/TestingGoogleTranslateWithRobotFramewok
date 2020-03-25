@@ -2,38 +2,19 @@
 
 This is a short exaple which examplains on how to test Google translate functionality with Python and Robot framework
 
-Table of content:
 ### 1. Introduction
-### 2. Installation
- - Python and pip
- - Robot framework
- - PyCharm Editor and Robot plagin
- - Desired browsers and Selenium Library
- - Internal Libraries
-### 3.How to execute tests
-### 4. Project structure
-### 5. Examples - check Tests folder in the repo
-* Automatic language recognition for two languages
-* Manual language picker functionality
-* Language exchange option functionality
-* Delete text option 
-* Document translation functionality
-### 5.Create custom library using Python for Document translation functionality
+[Robot Framework](http://robotframework.org) is an open source automation framework for acceptance testing, acceptance test driven development (ATDD), and robotic process automation (RPA). It has simple plain text syntax (keyword-driven) and it can be extended easily with libraries implemented using Python or Java.
 
-
-### 1. Introduction
-[Robot Framework](http://robotframework.org) is an open source automation framework for acceptance testing, acceptance test driven development (ATDD), and robotic process automation (RPA). It has simple plain text syntax and it can be extended easily with libraries implemented using Python or Java.
-
-Robot Framework is operating system and application independent. The core framework is implemented using [Python](http://python.org.org), supports both Python 2 and Python 3, and runs also on Jython (JVM), IronPython (.NET) and PyPy. The framework has a rich ecosystem around it consisting of various generic libraries and tools that are developed as separate projects. For more information about Robot Framework and the ecosystem, see http://robotframework.org. Robot Framework development is sponsored by Robot Framework .
+Robot Framework is operating system and application independent. The core framework is implemented using [Python](http://python.org.org), supports both Python 2 and Python 3, and runs also on Jython (JVM), IronPython (.NET) and PyPy. The framework has a rich ecosystem around it consisting of various generic libraries and tools that are developed as separate projects. For more information about Robot Framework and the ecosystem, see http://robotframework.org.
 - [GitHub](http://github.com/robotframework/robotframework)
 - [PyPI](http://pypi.python.org/pypi/robotframework)
 - [Maven central](http://search.maven.org/#search%7Cga%7C1%7Ca%3Arobotframework)
 ------------------------------------------------------------
 ### 2. Installation
-To understand how the framewoork works and the logic of my project you have to follow installation instractions step by step.
+To understand how the framewoork works and the logic of my project you have to follow installation instractions step by step. If you have evrything setup just download the project in ZIP format and verify it in any Editor.
 
 #### 2.1 Python and pip
-In this project we will be using [Python3](https://www.python.org/downloads/). Just follow the instalractions from the website and install it properly by adding a correct *PATH*. Starting from Python 2.7.9, the standard Windows installer by default installs and activates pip. Now you are ready to install Robot framework. The recommended installation method is using pip: 
+In this project we will be using [Python3](https://www.python.org/downloads/). Follow the instractions from the website and install it properly by adding a correct *PATH*. Starting from Python 2.7.9, the standard Windows installer by default installs and activates pip. Now you are ready to install Robot framework. The recommended installation method is using pip: 
 ```sh
 $ pip install robotframework
 
@@ -43,12 +24,12 @@ $ pip install --upgrade robotframework
 ------------------------------------------------------------
 #### 2.3 PyCharm Editor and Robot plagin
 
-There are a lot of Editors you can use to build your own project but I am using [PyCharm Community](https://www.jetbrains.com/pycharm/download/#section=windows). After installing PyCharm, don't forget to install *Intellibot plugin*(patched for SeleniumLibrary). For this launch PyCharm -> Open File -> Settings dialog -> Click on Plugins -> Search for & install Intellibot and restart PyCharm.
+There are a lot of Editors you can use to build your project, I am using [PyCharm Community](https://www.jetbrains.com/pycharm/download/#section=windows). Download and install it. After installing PyCharm, don't forget to install *Intellibot plugin*(@patched for SeleniumLibrary). To install plugin launch PyCharm -> Open File -> Settings dialog -> Click on Plugins -> Search for & install Intellibot and restart PyCharm.
 
 ------------------------------------------------------------
 #### 2.4 Desired browsers and Selenium Library
 
-In order to work with Selenium Library we have to install and download Selenium Web drivers. The whole list of supported drivers is listed [here](https://selenium.dev/documentation/en/webdriver/driver_requirements/#quick-reference) but in this project I am using only on *Firefox.* [Download Firofox driver](https://github.com/mozilla/geckodriver/releases) -> create special folder to place it in (e.g.C:\bin) -> add this folder to the *PATH*. When you run tests it will know where to take drivers. The same you can for any other driver you want to use. 
+In order to work with Selenium Library we have to install and download Selenium Web drivers. The whole list of supported drivers is listed [here](https://selenium.dev/documentation/en/webdriver/driver_requirements/#quick-reference) but in this project I am using only *Firefox.* [Download Firofox driver](https://github.com/mozilla/geckodriver/releases) -> create special folder to place it in (e.g.C:\bin) -> add this folder to the *PATH*. When you run tests it will know where to take drivers. The same you can for any other driver you want to use. 
 
 To install Selenium Library use pip:
 
@@ -59,7 +40,7 @@ $ pip install seleniumlibrary
 $ pip install robotframework-seleniumlibrary
 ```
 
-To use SeleniumLibrary in Robot Framework tests, the library needs to first be imported using the *Library* setting as any other library. The library accepts some import time arguments, which are documented in the keyword documentation along with [all the keywords](https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html) provided by the library(e.g.*Open Browser, Input Text, Click Element, Execute Javascript*).
+To use SeleniumLibrary in Robot Framework tests, the library needs to first be imported using the *Library* setting. This should be done for all test cases where you use it. The library accepts some import time arguments, which are documented in the keyword documentation along with [all the keywords](https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html) provided by the library(e.g.*Open Browser, Input Text, Click Element, Execute Javascript*).
 
 ------------------------------------------------------------
 #### 2.5 Internal Libraries
@@ -84,7 +65,6 @@ robot -d Results Tests\testName.robot
 ```
 ------------------------------------------------------------
 ### 4. Project structure
-Assume the project name is "GoogleTranslate"
 ```sh
 .
 |-- Google Translate
@@ -100,9 +80,10 @@ Assume the project name is "GoogleTranslate"
 |   |   |-- TestSuite4.robot
 |   |-- Results
 ```
-All variables are in WebElements.robot file. It always better to create web element for every page in separate files but in my case as an example I was using only one.
-Keywords are also in sepate directory and they used in all Test Cases. It also better to create separate keywords files for every web page, in this case it's easier to maintain them, as an example I used one directory.
-Tests directory contains only tests written using SeleniumLibrary mostly, BuiltIn and HTTP.Requests library.
+All variables are in *WebElements.robot* file. It always better to create web element for every page in separate files but in my case as an example I was using only one.
+Keywords are also in sepate directory *Keywords.robot* and they are used in all Test Cases. It also better to create separate keywords files for every web page, in this case it's easier to maintain them, as an example I used one directory.
+
+Tests directory contains only tests written using SeleniumLibrary mostly and BuiltIn.
 
 You can easily download the project, unzip it and following all instactions above just run tests.
 
@@ -176,10 +157,13 @@ Just two simple tests which check English and Ukrainian language recognition. Ot
          Input Text  ${TEXT_FIELD}  ${TEXT2}
          ${TEXT_FIELD_VALUE}  Get Value  ${TEXT_FIELD}
          Should be equal   ${TEXT2}  ${TEXT_FIELD_VALUE}
-         
+
+To see the example of Results download repository and open Report.hml in any browser.
+
 ### 5.Create custom library using Python for Document translation functionality
 
 Not finished
+
 This should be tested by usuing manually created Python Library.The Library should create Document in all supported formats and then upload this Document to Google Translate. It's also possible to create Keywords with Python which should be reused in Test Cases.
 
 

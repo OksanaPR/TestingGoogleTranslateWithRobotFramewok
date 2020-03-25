@@ -34,13 +34,12 @@ To understand how the framewoork works and the logic of my project you have to f
 
 #### 2.1 Python and pip
 In this project we will be using [Python3](https://www.python.org/downloads/). Just follow the instalractions from the website and install it properly by adding a correct *PATH*. Starting from Python 2.7.9, the standard Windows installer by default installs and activates pip. Now you are ready to install Robot framework. The recommended installation method is using pip: 
-                                           
-                                           ```sh
-                                             $ pip install robotframework
+```sh
+$ pip install robotframework
 
-                                             #upgrade to the latest version
-                                             $ pip install --upgrade robotframework
-                                             ```
+#upgrade to the latest version
+$ pip install --upgrade robotframework
+```
 ------------------------------------------------------------
 #### 2.3 PyCharm Editor and Robot plagin
 

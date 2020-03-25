@@ -84,7 +84,6 @@ robot -d Results Tests\testName.robot
 ```
 ------------------------------------------------------------
 ### 4. Project structure
-Assume the project name is "GoogleTranslate"
 ```sh
 .
 |-- Google Translate
@@ -100,9 +99,10 @@ Assume the project name is "GoogleTranslate"
 |   |   |-- TestSuite4.robot
 |   |-- Results
 ```
-All variables are in WebElements.robot file. It always better to create web element for every page in separate files but in my case as an example I was using only one.
-Keywords are also in sepate directory and they used in all Test Cases. It also better to create separate keywords files for every web page, in this case it's easier to maintain them, as an example I used one directory.
-Tests directory contains only tests written using SeleniumLibrary mostly, BuiltIn and HTTP.Requests library.
+All variables are in *WebElements.robot* file. It always better to create web element for every page in separate files but in my case as an example I was using only one.
+Keywords are also in sepate directory *Keywords.robot* and they are used in all Test Cases. It also better to create separate keywords files for every web page, in this case it's easier to maintain them, as an example I used one directory.
+
+Tests directory contains only tests written using SeleniumLibrary mostly and BuiltIn.
 
 You can easily download the project, unzip it and following all instactions above just run tests.
 

@@ -20,12 +20,12 @@ Type Text in Ukrainian
 
 Confirm English is detected
   ${LANG_VALUE}  Get Value  ${DETECT_LANG_BUTTON}
+#google translate doesn't allow to get from the structure which text was written as autput
 
 Confirm Ukrainian is detected
   ${LANG_VALUE}  Get Value  ${DETECT_LANG_BUTTON}
+#google translate doesn't allow to get from the structure which text was written as autput
 
-
-#**********************************Test Suite 2 Keywords****************************************************
 Close Notification popup
   Click Element  ${NOTIFICATION}
 
@@ -36,6 +36,22 @@ Select Czech language as default
   Click Element  ${CZECH_LANG}
   ${LANG_VALUE}  Get Value  ${FOCUSED_BUTTON}
   Should be equal  ${CZECH}  ${LANG_VALUE}
+
+#**********************************Test Suite 2 Keywords****************************************************
+Set translate from English language
+  Close Notification popup
+  Click Element  ${DETECT_LANG_BUTTON}
+  Page should contain element  ${LANG_LIST}
+  Set Focus to Element  ${ENGLISH_LANG}
+  Click Element  ${ENGLISH_LANG}
+  ${RECOGNIZED_LANG}  Get Value  ${FOCUSED_BUTTON}
+  Should be equal  ${ENGLISH}  ${RECOGNIZED_LANG}
+
+Set translate to Ukrainian language
+  Execute JavaScript  ${CLICK_DPOPDOWN}
+  Execute JavaScript  ${SELECT_UKR}
+  Log Location
+  Location Should Contain  ${CORRECT_LANG}
 
 Confirm English is recognized
   ${RECOGNIZED_LANG}  Get Value  ${FOCUSED_BUTTON}
@@ -51,20 +67,6 @@ Click on Recognised language link
 
 
 #**********************************Test Suite 3 Keywords****************************************************
-Set translate from English language
-  Close Notification popup
-  Click Element  ${DETECT_LANG_BUTTON}
-  Page should contain element  ${LANG_LIST}
-  Set Focus to Element  ${ENGLISH_LANG}
-  Click Element  ${ENGLISH_LANG}
-  ${RECOGNIZED_LANG}  Get Value  ${FOCUSED_BUTTON}
-  Should be equal  ${ENGLISH}  ${RECOGNIZED_LANG}
-
-Set translate to Ukrainian language
-  Execute JavaScript  ${CLICK_DPOPDOWN}
-  Execute JavaScript  ${SELECT_UKR}
-  Log Location
-  Location Should Contain  ${CORRECT_LANG}
 
 Exchange languages
 #This Keyword verifies language exchange button by pressing the button on UI and by using shortcut

@@ -2,25 +2,6 @@
 
 This is a short exaple which examplains on how to test Google translate functionality with Python and Robot framework
 
-Table of content:
-### 1. Introduction
-### 2. Installation
- - Python and pip
- - Robot framework
- - PyCharm Editor and Robot plagin
- - Desired browsers and Selenium Library
- - Internal Libraries
-### 3.How to execute tests
-### 4. Project structure
-### 5. Examples - check Tests folder in the repo
-* Automatic language recognition for two languages
-* Manual language picker functionality
-* Language exchange option functionality
-* Delete text option 
-* Document translation functionality
-### 5.Create custom library using Python for Document translation functionality
-
-
 ### 1. Introduction
 [Robot Framework](http://robotframework.org) is an open source automation framework for acceptance testing, acceptance test driven development (ATDD), and robotic process automation (RPA). It has simple plain text syntax and it can be extended easily with libraries implemented using Python or Java.
 
@@ -180,6 +161,7 @@ Just two simple tests which check English and Ukrainian language recognition. Ot
 ### 5.Create custom library using Python for Document translation functionality
 
 Not finished
+
 This should be tested by usuing manually created Python Library.The Library should create Document in all supported formats and then upload this Document to Google Translate. It's also possible to create Keywords with Python which should be reused in Test Cases.
 
 

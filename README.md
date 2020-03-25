@@ -158,8 +158,7 @@ Just two simple tests which check English and Ukrainian language recognition. Ot
          ${TEXT_FIELD_VALUE}  Get Value  ${TEXT_FIELD}
          Should be equal   ${TEXT2}  ${TEXT_FIELD_VALUE}
 
-Results logs
-![Results](https://drive.google.com/file/d/105_BGrOSo2vucJVqU2REEqXyCIysL37M/view?usp=sharing "Results")
+To see the example of Results download repository and open Report.hml in any browser.
 
 ### 5.Create custom library using Python for Document translation functionality
 

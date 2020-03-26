@@ -13,5 +13,5 @@ Test Teardown  Close All Browsers
 Test Case 1 - Verify delete text option
   Open browser on Google translate page
   Type Text in English
-#This key word deletes text in three ways: with backspaces,
+#This key word deletes text in two ways: Backspace and Delete button on UI
   Delete Text

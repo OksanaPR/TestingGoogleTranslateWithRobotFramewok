@@ -1,6 +1,6 @@
 ## Test Google translate functionality with Robot Framewok
 
-This is a short exaple which examplains on how to test Google translate functionality with Python and Robot framework
+This is a short example which explains on how to test Google translate functionality with Python and Robot framework
 
 ### 1. Introduction
 [Robot Framework](http://robotframework.org) is an open source automation framework for acceptance testing, acceptance test driven development (ATDD), and robotic process automation (RPA). It has simple plain text syntax (keyword-driven) and it can be extended easily with libraries implemented using Python or Java.

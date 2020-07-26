@@ -4,7 +4,7 @@
 
 *** Variables ***
 #***************Common Variables*****************
-${BROWSER}  firefox
+${BROWSER}  headlessfirefox
 ${TRANSLATOR_URL}  https://translate.google.com/
 ${LOGO}  xpath=//*[@class='gb_mc']
 ${DETECT_LANG_BUTTON}  xpath=//*[@value='auto']

@@ -1,5 +1,6 @@
 #This files contains Variables used in all Tests. It's always better to split Variables into
 #different files depending on every web page. But since this is only example I am puting everything into one file
+# Almost for all elements I was using xpath which searches by class
 
 *** Variables ***
 #***************Common Variables*****************
@@ -15,10 +16,8 @@ ${TEXT2}  Тестовий текст
 ${SELECT_LANG}  xpath=//*[@class='language-list']
 ${RIGHT_LANG_BUTTON}  xpath=//*[@class='sl-sugg-button-container']
 ${LEFT_LANG_BUTTON}
-
 ${NOTIFICATION}  xpath=//*[@class='tlid-acknowledge-button-overlay acknowledge-button-overlay']
 ${NOTIFICATION_AREA}  xpath=//*[@class='acknowledge-button button']
-
 ${LANG_LIST}  xpath=//*[@class='displaying-homepage with-sl-list with-lang-list']
 ${CZECH_LANG}  xpath=//*[@class='language_list_item_wrapper language_list_item_wrapper-cs']
 ${FOCUSED_BUTTON}  xpath=//*[@class='goog-inline-block jfk-button jfk-button-standard jfk-button-collapse-left jfk-button-collapse-right jfk-button-checked']

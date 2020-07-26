@@ -34,9 +34,6 @@ In order to work with Selenium Library we have to install and download Selenium 
 To install Selenium Library use pip:
 
 ```sh
-$ pip install seleniumlibrary
-                   
-#if you use older version of Python use this command
 $ pip install robotframework-seleniumlibrary
 ```
 

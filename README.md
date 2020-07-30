@@ -17,7 +17,7 @@ To understand how the framewoork works and the logic of my project you have to f
 In this project we will be using [Python3](https://www.python.org/downloads/). Follow the instractions from the website and install it properly by adding a correct *PATH*. Starting from Python 2.7.9, the standard Windows installer by default installs and activates pip. Now you are ready to install project environment. You can do it by executing *requirements.txt* or following the guide below. 
 
 ```sh
-$ pip3 install -r requirements.txt
+$ pip install -r requirements.txt
 ```
 
 Recommended installation method for Robot framework is using pip: 

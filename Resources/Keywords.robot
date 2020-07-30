@@ -5,7 +5,7 @@
 #**********************************Common Keyword**********************************************************
 Open browser on Google translate page
   Open browser  ${TRANSLATOR_URL}  ${BROWSER}
-  Page should contain element  ${LOGO}  ${DETECT_LANG_BUTTON}  limit=2
+  Page should contain element  ${LOGO}
 
 #**********************************Test Suite 1 Keywords****************************************************
 Type Text in English
